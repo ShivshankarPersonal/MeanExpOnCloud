@@ -6,7 +6,8 @@ var dbURI = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 //var dbURI = "mongodb://shiv:shiv@ds047865.mongolab.com:47865/meantest";
 //var dbURI = 'mongodb://localhost/meanAuth';
 if (process.env.NODE_ENV === 'production') {
-  dbURI = process.env.MONGOLAB_URI;
+  //dbURI = process.env.MONGOLAB_URI;
+  dbURI = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
 }
 
 mongoose.connect(dbURI);
